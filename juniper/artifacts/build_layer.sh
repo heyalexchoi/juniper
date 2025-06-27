@@ -35,8 +35,9 @@ find layer -type d -name "__pycache__"        -delete
 find layer -type d -name ".juni"             -exec rm -rf {} +
 find layer -type d -name "tests"              -exec rm -rf {} +
 find layer -type d -name "features"           -exec rm -rf {} +
-find layer -type d -name "*.dist-info*"       -exec rm -rf {} +
-find layer -type d -name "*.egg-info*"        -exec rm -rf {} +
+# keep metadata
+# find layer -type d -name "*.dist-info*"       -exec rm -rf {} +
+# find layer -type d -name "*.egg-info*"        -exec rm -rf {} +
 
 cd layer
 zip -q -9r "../dist/$1.zip" .
